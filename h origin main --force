@@ -1,0 +1,5 @@
+[33mb8ab42f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m security: Remove hardcoded Stripe keys, use environment variables
+[33m413746a[m Merge branch 'main' of https://github.com/It2works/GlobCoders
+[33mac62c2a[m Initial commit: GlobCoders Learning Management Platform - Full-stack application with React, TypeScript, Node.js, MongoDB, Stripe payments, quiz system, and real-time features
+[33m2dd0399[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Initial commit
+[33m2f5fcf4[m 🚀 Enhanced CORS fix with manual headers and debugging

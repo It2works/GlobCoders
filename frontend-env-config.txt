@@ -1,0 +1,16 @@
+# FRONTEND LOCAL ENVIRONMENT CONFIGURATION
+# Copy this content to a new file called .env.local in your frontend folder
+
+VITE_API_BASE_URL=http://localhost:5000
+VITE_CLOUDINARY_CLOUD_NAME=djjizje3w
+VITE_CLOUDINARY_UNSIGNED_PRESET=unsigned_teacher_video
+VITE_APP_ENV=development
+
+# IMPORTANT: Make sure your backend is running on localhost:5000
+# The frontend will now run on localhost:5173 (standard Vite port)
+
+# INSTRUCTIONS:
+# 1. Create a new file called .env.local in your frontend folder
+# 2. Copy the content above (without the # comments)
+# 3. Save the file
+# 4. Restart both frontend and backend
