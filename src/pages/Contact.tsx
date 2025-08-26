@@ -22,7 +22,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {/* Email Card */}
           <Card className="text-center bg-gradient-to-br from-card to-muted/30 hover:shadow-lg transition-all duration-300">
             <CardContent className="p-6">
@@ -33,15 +33,7 @@ const Contact = () => {
             </CardContent>
           </Card>
 
-          {/* Phone Card */}
-          <Card className="text-center bg-gradient-to-br from-card to-muted/30 hover:shadow-lg transition-all duration-300">
-            <CardContent className="p-6">
-              <Phone className="h-8 w-8 text-primary mx-auto mb-4" />
-              <h3 className="font-semibold text-lg mb-2">Téléphone</h3>
-              <p className="text-primary font-medium mb-1">+33 6 64 68 01 63</p>
-              <p className="text-sm text-muted-foreground">Lun-Ven: 9h-18h</p>
-            </CardContent>
-          </Card>
+
 
           {/* Hours Card */}
           <Card className="text-center bg-gradient-to-br from-card to-muted/30 hover:shadow-lg transition-all duration-300">

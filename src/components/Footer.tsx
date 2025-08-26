@@ -76,10 +76,7 @@ const Footer = () => {
                 <Mail className="w-5 h-5 flex-shrink-0" />
                 <span>contact@globcoders.com</span>
               </li>
-              <li className="flex items-center space-x-3 text-white/80">
-                <Phone className="w-5 h-5 flex-shrink-0" />
-                <span>+33 6 64 68 01 63</span>
-              </li>
+
               <li className="flex items-center space-x-3 text-white/80">
                 <MapPin className="w-5 h-5 flex-shrink-0" />
                 <span>Paris, France</span>

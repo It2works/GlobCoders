@@ -1,23 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
-import { Users, Target, Heart, Zap, Globe, Award, BookOpen, Lightbulb } from "lucide-react";
+import { Users, Target, Heart, Zap, Globe, Award, BookOpen, Lightbulb, Github } from "lucide-react";
 
 const About = () => {
-  const team = [
-    {
-      name: "Sébastien Lebrun",
-      role: "Fondateur & CEO",
-      image: "👨🏻‍🦰",
-      description: "Fondateur passionné par l'éducation technologique et l'innovation pédagogique."
-    },
-    {
-      name: "Ayari Mohamed Ghassen",
-      role: "Ingénieur Informatique",
-      image: "🧑🏻‍💻",
-      description: "Expert en développement et en création de solutions éducatives innovantes."
-    }
-  ];
+  const developer = {
+    name: "Ayari Mohamed Ghassen",
+    role: "Développeur Créateur",
+    image: "🧑🏻‍💻",
+    description: "Développeur créateur de cette plateforme GlobCoders. Passionné par le développement web et les solutions éducatives innovantes.",
+    github: "https://github.com/It2works"
+  };
 
   const values = [
     {
@@ -189,90 +182,39 @@ const About = () => {
           </Card>
         </div>
 
-        {/* Team Section */}
+        {/* Developer Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Notre Équipe</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {team.map((member, index) => (
-              <Card key={index} className="text-center bg-gradient-to-br from-card to-muted/30 hover:shadow-lg transition-all duration-300">
+          <h2 className="text-3xl font-bold text-center mb-12">Le Développeur</h2>
+          <div className="flex justify-center">
+            <div className="max-w-md">
+              <Card className="text-center bg-gradient-to-br from-card to-muted/30 hover:shadow-lg transition-all duration-300">
                 <CardHeader>
-                  <div className="text-6xl mb-4">{member.image}</div>
-                  <CardTitle className="text-lg">{member.name}</CardTitle>
-                  <CardDescription className="text-primary font-semibold">
-                    {member.role}
+                  <div className="text-6xl mb-4">{developer.image}</div>
+                  <CardTitle className="text-xl">{developer.name}</CardTitle>
+                  <CardDescription className="text-primary font-semibold text-base">
+                    {developer.role}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{member.description}</p>
+                  <p className="text-sm text-muted-foreground mb-4">{developer.description}</p>
+                  <div className="flex justify-center">
+                    <a
+                      href={developer.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                    >
+                      <Github className="h-4 w-4" />
+                      <span className="text-sm font-medium">GitHub Profile</span>
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
-            ))}
+            </div>
           </div>
         </div>
 
-        {/* Story Section */}
-        <div className="mb-16">
-          <Card className="bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
-            <CardContent className="p-12">
-              <h2 className="text-3xl font-bold text-center mb-8">Pourquoi les Cours Particuliers ?</h2>
-              <div className="max-w-4xl mx-auto">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Notre staff, issu de plusieurs champs disciplinaires tous liés à l'informatique est parti d'un simple constat :
-                  Est-ce que les cours d'informatique en groupe sont adaptés à chaque enfant ?
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  La réponse fut unanime : <strong className="text-primary">NON</strong>
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Nous sommes partis d'un sondage sur plusieurs centaines d'enfants :
-                </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                  <div className="bg-white/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground italic">"J'ai déjà fait des cours en groupe, ce fût une mauvaise expérience, trop de bruit et le professeur n'avait pas assez de temps pour chaque élève"</p>
-                  </div>
-                  <div className="bg-white/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground italic">"Moi je suis timide, je ne suis pas à l'aise en groupe"</p>
-                  </div>
-                  <div className="bg-white/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground italic">"Mon fils est hyperactif il a tendance à se dissiper dans un groupe"</p>
-                  </div>
-                  <div className="bg-white/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground italic">"Ma famille et moi, on voyage tout le temps car mon papa est expatrié"</p>
-                  </div>
-                  <div className="bg-white/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground italic">"Je veux faire des cours mais uniquement en duo avec mon frère qui a 2 ans de plus que moi"</p>
-                  </div>
-                  <div className="bg-white/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground italic">"Je ne maitrise pas trop bien le français, je veux faire les cours mais en Arabe, et avec une enseignante femme"</p>
-                  </div>
-                  <div className="bg-white/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground italic">"J'ai 11 ans, je suis autiste asperger de haut niveau, et personne ne veut me prendre en classe car j'ai un profil particulier"</p>
-                  </div>
-                  <div className="bg-white/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground italic">"J'ai un quotidien trop chargé, je ne peux pas faire des cours en groupe à horaire fixe"</p>
-                  </div>
-                  <div className="bg-white/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground italic">"Je suis un jeune marocain, Mon rêve au-delà des cours de codage est d'échanger avec des enfants de l'Asie de l'Afrique et d'autres continents"</p>
-                  </div>
-                  <div className="bg-white/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground italic">"Jeune fille du Nigéria, je ne trouve pas de structure en cours particulier de codage en Anglais"</p>
-                  </div>
-                  <div className="bg-white/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground italic">"J'ai 15ans j'ai pris des cours de codage déjà sur Scratch et maintenant Python, Java et C++ c'était bien mais je ne peux pas avancer à mon rythme, je veux faire des cours particuliers pour accélérer mon cursus car je veux monter ma société rapidement et pouvoir aider ma famille"</p>
-                  </div>
-                  <div className="bg-white/50 p-4 rounded-lg">
-                    <p className="text-sm text-muted-foreground italic">"Je suis Belge j'ai 12 ans et je voudrais prendre des cours en duo avec un garçon anglophone, comme ça en plus de coder j'améliore mon anglais"</p>
-                  </div>
-                </div>
-
-                <p className="text-lg text-muted-foreground leading-relaxed text-center">
-                  <strong className="text-primary">Ces témoignages ont confirmé notre approche :</strong> Les cours particuliers sont la solution pour répondre aux besoins uniques de chaque enfant.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
 
         {/* CTA Section */}
         <div className="text-center">
